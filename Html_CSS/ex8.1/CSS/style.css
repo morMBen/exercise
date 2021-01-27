@@ -1,0 +1,157 @@
+body{
+    background-color: lightslategray;
+    
+}
+button{
+    margin: 10px;
+    padding:10px 40px;
+}
+
+.container{
+    margin:auto;
+    padding: 30px ;
+    
+
+}
+.box1 button{
+    
+    display: inline-block;
+    color: white; 
+    border: none;
+    text-decoration: none;
+}
+
+.box2 button{
+    display: inline-block;
+    color: white; 
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+}
+.box3 button{
+    display: inline-block;
+    color: white; 
+    border-width:3px;
+    border-style: solid;
+    text-decoration: none;
+}
+.box4 button{
+    border-radius:25px;
+    display: inline-block;
+    color: white; 
+    text-decoration: none;   
+}
+#b1{
+    background: green;
+    font-size: 2em;
+}
+#b1:hover{
+    background-color: rgb(0, 98, 0);
+  color: white;
+}
+#b2{
+    background: red;
+    font-size: 1.5em;
+}
+#b2:hover{
+    background-color: rgb(220, 0, 0);
+  color: white;
+}
+#b3{
+    background: blue;
+    font-size: 1em;
+}
+#b3:hover{
+    background-color:rgb(0, 0, 225);
+  color: white;
+}
+
+#b4{
+    background: orange;
+    font-size: 2em;
+}
+#b4:hover{
+    background-color: rgb(216, 140, 0);
+  color: white;
+}
+#b5{
+    background: yellow;
+    font-size: 1.5em;
+}
+#b5:hover{
+    background-color: rgb(216, 216, 0);
+  color: white;
+}
+#b6{
+    background: grey;
+    font-size: 1em;
+}
+#b6:hover{
+    background-color:rgb(97, 95, 95);
+  color: white;
+}
+
+
+
+
+#b7{
+    background: none;
+    font-size: 2em;
+    border-color: orange;
+}
+#b7:hover{
+    background-color:  orange;
+  color: white;
+  
+}#b8{
+    background: none;
+    font-size: 1.5em;
+    border-color: red;
+}
+#b8:hover{
+    background-color:  red;
+  color: white;
+  
+}
+
+#b9{
+    background: none;
+    font-size: 1em;
+    border-color: blue;
+}
+#b9:hover{
+    background-color:  blue;
+  color: white;
+  
+}
+#b10{
+    background: none;
+    font-size: 2em;
+    border-color: orange;
+}
+#b10:hover{
+    background-color:  orange;
+  color: white;
+  
+}
+#b11{
+    background: none;
+    font-size: 1.5em;
+    border-color: red;
+}
+#b11:hover{
+    background-color:  red;
+  color: white;
+  
+}
+
+#b12{
+    background: none;
+    font-size: 1em;
+    border-color: blue;
+}
+#b12:hover{
+    background-color:  blue;
+  color: white;
+  
+}

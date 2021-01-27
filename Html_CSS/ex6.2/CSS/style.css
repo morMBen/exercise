@@ -1,0 +1,24 @@
+#card{
+    background-color: antiquewhite;
+    width: 350px;   
+}
+#card-content{
+    padding: 20px;
+}
+#card-content h1{
+    font-size: 35px;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#card-content h2{
+    font-size: 22px;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+#card-content a{
+    font-size: 17px;
+    color: rgb(131, 45, 18);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    margin: 3px;
+}
+

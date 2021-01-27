@@ -1,0 +1,15 @@
+h1{
+    border: red 1px solid;
+    font-size: 40px;
+    border-radius: 20px;
+}
+h2{
+    font-weight: bold;
+    font-style: italic;
+}
+h3{
+    text-shadow: 2px 5px 3px #f5275b;
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}

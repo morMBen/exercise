@@ -1,0 +1,49 @@
+
+
+.container {
+    
+    max-width: 1100px;
+    margin: 3%  auto;
+}
+.header{
+    background: sandybrown;
+            border: 1px solid #333;
+            margin: 5px;
+            text-align:center;
+           
+}
+.sider{
+    background: limegreen;
+            border: 1px solid #333;
+            float: left;
+            height: 300px; 
+            margin: 5px;
+            width: calc(25% - 20px)
+            
+                       
+}
+.sider h3{
+    margin: 20px;
+}
+.main h3{
+    margin: 20px;
+}
+.main{
+    background: slateblue;
+            border: 1px solid #333;
+            float: right;
+            height: 300px; 
+            margin: 5px;
+            width:calc(75% - 20px);
+            text-align:right;
+
+        }
+.clear {
+    clear: both;
+}
+.footer{
+    background: lightskyblue;
+            border: 1px solid #333;
+            margin: 5px;
+            text-align:center;
+        }
