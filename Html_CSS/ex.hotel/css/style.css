@@ -6,7 +6,6 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   line-height: 1.8em;
-  height: 4000px;
 }
 a {
   text-decoration: none;
@@ -22,15 +21,71 @@ p {
 }
 
 /* utility class */
-/* utility class */
-/* utility class */
 
 #container {
   margin: auto;
-  max-width: 800px;
+  max-width: 1000px;
   overflow: auto;
   padding: 0 20px;
 }
+.text-primery {
+  color: #0a043c;
+  text-shadow: 0px 0px 7px#b8de6f;
+}
+.lead {
+  font-size: 20px;
+}
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d3e0ea;
+  background-color: #0a043c;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #02205c;
+}
+.btn-light {
+  background: #b8de6f;
+  color: #0a043c;
+}
+.bg-dark {
+  background: #444;
+  color: #f6f5f5;
+}
+.bg-light {
+  background: #f6f5f5;
+  color: #0a043c;
+}
+.bg-primery {
+  color: #f6f5f5;
+  background: #276678;
+}
+.clr {
+  clear: both;
+}
+
+.l-heading {
+  font-size: 40px;
+}
+/* padding */
+
+.py-1 {
+  padding: 10px 0;
+}
+.py-2 {
+  padding: 20px 0;
+}
+.py-3 {
+  padding: 30px 0;
+}
+.btn-light:hover {
+  color: #b8de6f;
+}
+
 #navbar {
   background: #d3e0ea;
   color: #fff;
@@ -53,11 +108,11 @@ p {
   float: right;
   background: #f6f5f5;
   margin-top: 35px;
-  font-size: 14px;
+  font-size: 18px;
 }
 #navbar ul li a {
   display: block;
-  padding: 2px 20px;
+  padding: 5px 30px;
   text-align: center;
 }
 #navbar ul li a:hover {
@@ -69,7 +124,122 @@ p {
   color: #276678;
   background: #a9cae4;
 }
-.text-primery {
+#showcase {
+  background: url("../img/HC_pool_guitar.jpg") no-repeat center center/cover;
+  height: 600px;
+}
+#showcase .showcase-content {
   color: #f6f5f5;
-  font-size: 30px;
+  text-align: center;
+  padding-top: 170px;
+}
+#showcase .showcase-content h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+  text-shadow: 0px 0px 5px#CC26E0;
+}
+#showcase .showcase-content p {
+  padding-bottom: 20px;
+  line-height: 1.5em;
+}
+#home-info {
+  height: 400px;
+}
+#home-info .info-img {
+  float: left;
+  width: 50%;
+  background: url("../img/HC_girl_pool.jpg") no-repeat;
+  min-height: 100%;
+}
+#home-info .info-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  min-height: 100%;
+  text-align: center;
+  padding: 50px 30px;
+  overflow: hidden;
+}
+#home-info .info-content p {
+  padding: 30px;
+}
+/* featurs */
+.box {
+  float: left;
+  width: 20%;
+  padding: 50px;
+  text-align: center;
+}
+.box i {
+  margin-bottom: 10px;
+}
+/* about imfo */
+
+#about-info .info-right {
+  float: right;
+  width: 50%;
+  min-height: 100%;
+}
+#about-info .info-right img {
+  display: block;
+  margin: auto;
+  width: 70%;
+  border-radius: 5px 10px 5px 50%;
+}
+#about-info .info-left {
+  float: left;
+  margin-top: 20px;
+  width: 50%;
+  min-height: 100%;
+}
+#testimonials {
+  height: 600px;
+  background: url("../img/HC_lounge.jpg") no-repeat center/cover;
+  padding-top: 40px;
+}
+#testimonials .testimonial {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+#testimonials .testimonial img {
+  width: 150px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+#testimonials h2 {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 40px;
+}
+/* Contact form */
+#contact-form .form-grup {
+  margin-bottom: 20px;
+}
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px #ddd solid;
+}
+#contact-form textarea {
+  height: 200px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #1687a7;
+}
+
+#main-footer {
+  text-align: center;
+  background: #444;
+  color: aliceblue;
+  font-size: 20px;
 }
