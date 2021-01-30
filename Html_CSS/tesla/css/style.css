@@ -6,6 +6,10 @@
   src: url(/fonts/Gotham-Book.ttf);
   font-family: got-b;
 }
+@font-face {
+  src: url(/fonts/Gotham-Light.ttf);
+  font-family: got-l;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -71,6 +75,7 @@ button{
   background: none;
   border-radius: 50px;
   padding:10px 40px 10px 40px;
+  
 }
 
 #side-bar{
@@ -111,10 +116,18 @@ flex-direction:initial;
   visibility: visible;
 }
 #section-1 {
+  z-index: 0;
   background: url("/img/model-3-hero-desktop.jpg") no-repeat center/cover;
   background-position:100% 35%;
 }
 
+.dark-logo{
+  width: 100px;
+  position: fixed;
+  top:23px;
+  left:20px;
+  z-index: -1;
+}
 .top-center-menu{
   margin-left: 100px;
 }
@@ -154,8 +167,6 @@ height: 100%;
 .page1-conet .outer-div .top-div .speedometer{
   margin-top: 5px;
   margin-right: 10px;
-  display:block;
-  justify-content: center;
 }
 .page1-conet .div-with-left-border{
   border-left: 1px;
@@ -184,9 +195,100 @@ height: 100%;
   border: 3px solid #171A20;
   color: #171A20;
 }
+.dark-button:hover{
+  background-color: #171A20;
+  color: #ffffff;
+}
 
 .page-down img{
   margin-top: 20px;
   width: 18px;
 }
 
+#right-container-page-2{
+  background: url("/img/page-2-background.png") no-repeat center/cover;
+  height: 100vh;
+  width: 73%;
+}
+#section-2{
+display: flex;
+}
+#left-container-page-2{
+  background-color:#ffffff ;
+  position:relative;
+  width: 27%;
+  z-index: -1;
+  height: 100vh;
+  padding: 50px;
+}
+#left-container-page-2 p{
+  color:#393c41;
+  font-family: got-b;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 16px;
+  font-size: 14px;
+  padding: 5px;
+  margin-bottom: 16px;
+}
+.dark-h1{
+  color: #171a20;
+  letter-spacing: -0.5px;
+  line-height: 36px;
+  font-size: 28px;
+}
+#left-container-page-2 .top-content-two h2{
+font-family: got-l;
+font-size: 17px;
+font-weight: 500;
+color: #171a20;
+line-height: 17px;
+}
+.top-content-two{
+  width:315px ;
+}
+.bottom-content-two{
+  border-radius: 25px;
+  background-color: #eeeeee;
+  padding: 30px;
+  opacity: 1;
+  display: block;
+  margin-bottom: 20px;
+}
+.rating-head{
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  padding-bottom: 16px;
+}
+.bottom-content-two .row{
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-content-two .row .rate-up{
+font-weight: bold;
+}
+.bottom-content-two .row .rate-down{
+  font-size: 8px;
+}
+
+.Plus-icon{
+  border: 3px solid #171A20;
+  padding: 3px;
+  border-radius: 50px;
+height: 42px;
+width: 42px;
+
+
+}
+.Plus-icon img{
+  height: 30px;
+  width: 30px;
+}
+.button-div{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
