@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vh Vw Units</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: chocolate url("/img/mind.jpeg") no-repeat center center/cover;
+            color: #ffffff;
+            height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            padding-top: 15rem;
+        }
+
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            /* links by default inline */
+            text-decoration: none;
+            background: #ffffff;
+            color: #333;
+            padding: 0.75rem 2rem;
+
+        }
+
+        @media(max-height:450px) {
+            header {
+                padding-top: 5rem;
+            }
+        }
+
+        section {
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcom To The Web</h1>
+        <p>I am by heritage a Jew, by citizenship a Israeli, and by makeup a human being, and only a human being,
+            without any special attachment to any state or national entity whatsoever.</p>
+        <a href="#" class="btn">find out more</a>
+    </header>
+    <section>
+        <h3>What should you look for</h3>
+        <p>A table, a chair, a bowl of fruit and a violin; what else does a man need to be happy?</p>
+    </section>
+</body>
+
+</html>

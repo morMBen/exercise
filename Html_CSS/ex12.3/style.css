@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+header{
+    background: blue;
+    height: 100vh;
+    padding-top: 3rem;
+    width: 75%;
+    float: left;
+}
+section{
+    background: green;
+    width:25%;
+    padding-top: 3rem;
+    height: 100vh;
+    float:right;
+}
+@media (max-width:768px){
+   header{
+       width: 100%;
+   }
+    section{
+        display: none;
+    }
+}
