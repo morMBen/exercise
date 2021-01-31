@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+
+    <title>ex15.5</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            background: grey;
+            height: 3rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border: rgb(87, 87, 87) solid 2px;
+        }
+
+        nav .boxes {
+            display: flex;
+            background: rgb(87, 87, 87);
+            border-radius: 0.2rem;
+        }
+
+        .logo:hover {
+            color: rgb(57, 57, 57);
+            ;
+        }
+
+        .box {
+            padding: 0.2rem 1rem;
+        }
+
+        .box:hover {
+            background: rgb(107, 107, 107);
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: 12rem;
+                justify-content: space-around;
+            }
+
+            nav .boxes {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .box:hover {
+                border-bottom: solid 2px rgb(57, 57, 57)
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p class="logo"><i class="fas fa-globe-africa fa-lg"></i></p>
+            <div class="boxes">
+                <div class="box home">
+                    <h3>HOME</h3>
+                </div>
+                <div class="box about">
+                    <h3>ABOUT</h3>
+                </div>
+                <div class="box portfolio">
+                    <h3>PORTFOLIO</h3>
+                </div>
+                <div class="box contact">
+                    <h3>CONTACT</h3>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
