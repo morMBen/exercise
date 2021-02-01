@@ -18,12 +18,17 @@
         justify-content: center;
     }
 
-    .my-value {
-        visibility: hidden;
+    span {
+        color: blue;
     }
 
-    .my-value:hover {
-        visibility: visible;
+    span:hover::after {
+        position: absolute;
+        content: attr(data-tooltip);
+        color: black;
+        border: black solid 1px;
+        background: blanchedalmond;
+        border-radius: 5px;
     }
 </style>
 
@@ -32,7 +37,7 @@
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos quaerat mollitia odit maiores unde dicta id? Quae
         ipsum repellendus maiores ex nostrum est sed praesentium et dolore dolores nam voluptate nulla illum eaque rem,
         atque laudantium fuga quam, rerum, reiciendis ipsam! Esse, odit neque! Esse quo ea vel, consequatur accusantium
-        adipisci non <span class="my-value">spsed</span> omnis libero
+        adipisci non <span data-tooltip="my-value">spsed</span> omnis libero
         maiores ullam amet necessitatibus dicta
         eligendi, fuga rem sint
         perferendis,
@@ -47,7 +52,8 @@
         Ad.
     </p>
     <p>
-        Lorem <span class="my-value">libero.</span> ipsum, dolor sit amet consectetur adipisicing elit. Eos
+        <span data-tooltip="my-value">libero. </span> Lorem libero . ipsum, dolor sit amet consectetur adipisicing elit.
+        Eos
         quaerat mollitia odit maiores unde dicta id? Quae
         ipsum repellendus maiores ex nostrum est sed praesentium et dolore dolores nam voluptate nulla illum eaque rem,
         atque laudantium fuga quam, rerum, reiciendis ipsam! Esse, odit neque! Esse quo ea vel, consequatur accusantium

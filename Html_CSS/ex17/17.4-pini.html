@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        .container {
+            padding: 2rem;
+            background: yellow;
+            position: relative;
+        }
+
+        .border-top::after {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            border-top: 3px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <span class="border-top"></span>
+        <h3>Cool Border</h3>
+        <span class="border-bottom"></span>
+    </div>
+</body>
+
+</html>
