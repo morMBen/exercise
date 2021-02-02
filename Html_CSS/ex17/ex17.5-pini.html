@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a {
+        text-decoration: none;
+        position: relative;
+    }
+
+    a[data-tooltip]:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        background: yellow;
+        width: max-content;
+        padding: 3px 5px;
+        border-radius: 25%;
+        top: -24px;
+        left: -16px;
+    }
+
+    a[data-tooltip]:hover::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid yellow;
+    }
+</style>
+
+<body>
+    <p>Lorem ipsum, <a data-tooltip="hellw world!" href="#">dolor</a> sit amet consectetur adipisicing elit. Numquam
+        esse minus adipisci eos
+        molestiae dolorem
+        voluptatem, ducimus alias, quaerat facilis dolor vel quo sit itaque ad molestias, tempora voluptas et
+        repellendus! Maxime, rerum nesciunt non quod nostrum iusto repellat, beatae cum mollitia reiciendis inventore
+        aut atque consequatur velit explicabo doloremque maiores quae cumque, impedit quas itaque alias labore culpa. Ad
+        dolore dignissimos minus quas dolorem perspiciatis expedita alias eum, consequuntur autem temporibus saepe, iure
+        provident. Est corporis deleniti animi quibusdam accusantium doloremque praesentium dignissimos optio iure
+        repellat <a data-tooltip="Hay" href="#"> dolorum</a>, recusandae sunt officia fugit nisi explicabo magnam
+        excepturi distinctio consectetur
+        cupiditate! Laborum est voluptas consectetur illum necessitatibus. Dolorum incidunt veniam eaque tempore amet
+        odit saepe id placeat doloremque maiores, accusamus corrupti ipsa!</p>
+</body>
+
+</html>
