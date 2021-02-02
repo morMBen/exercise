@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex19.2</title>
+    <style>
+        body {
+            background: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            font-weight: 600;
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+        div {
+            margin: 50px;
+        }
+
+        /* box-1 */
+
+
+        .box1 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 300px;
+            background: blanchedalmond;
+            top: 0;
+            left: 0;
+            border: #333 5px solid;
+            overflow: hidden;
+        }
+
+
+        .box1::before {
+            content: "";
+            position: absolute;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(0);
+            height: 100px;
+            width: 300px;
+            transform: translateX(-300px);
+            transition: all 1s;
+        }
+
+        .box1:hover::before {
+            transform: translatex(0);
+
+        }
+
+        .box1::after {
+            content: "Transition";
+            position: absolute;
+            height: 100px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+
+        }
+
+        .box1:hover::after {
+            position: absolute;
+            color: white;
+        }
+
+
+        /* box-2 */
+
+
+        .box2 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 300px;
+            background: blanchedalmond;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            border: #333 5px solid;
+        }
+
+        .box2::after {
+            content: "YEAH!";
+            position: absolute;
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(0);
+            height: 100px;
+            width: 300px;
+            transform: translatey(-300px);
+            transition: transform 1s;
+
+        }
+
+        .box2:hover::after {
+            position: absolute;
+            transform: translatex(0);
+        }
+
+        /* box-3 */
+
+
+        .box3 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 300px;
+            background: blanchedalmond;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            border: #333 5px solid;
+        }
+
+
+        .box3::before {
+            content: "";
+            position: absolute;
+            background: yellow;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(0);
+            height: 100px;
+            width: 300px;
+            top: -200px;
+            left: 50px;
+            transform: translateX(-300px);
+            transform: rotate(-45deg);
+            transition: all 1s;
+
+        }
+
+        .box3:hover::before {
+            position: absolute;
+            transform: rotate(0);
+            top: 0;
+            left: 0;
+        }
+
+        .box3::after {
+            content: "Rotate";
+            position: absolute;
+            height: 100px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+        }
+
+        .box3:hover::after {
+            position: absolute;
+        }
+
+        /* box-4 */
+
+
+        .box4 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 500px;
+            background: blanchedalmond;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            border: #333 5px solid;
+        }
+
+        .box4::after {
+            content: "Scale & Opacity";
+            position: absolute;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(0);
+            opacity: 0%;
+            height: 2000px;
+            width: 1000px;
+            transition: all 1s;
+            font-size: 100px;
+
+        }
+
+        .box4:hover::after {
+            position: absolute;
+            height: 300px;
+            width: 1500px;
+            background: black;
+            color: white;
+            font-size: 50px;
+            opacity: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box3">
+
+    </div>
+    <div class="box1">
+        Transition
+    </div>
+    <div class="box2">
+        TranslateY
+    </div>
+    <div class="box4">
+        Scale & Opacity
+    </div>
+
+</body>
+
+</html>

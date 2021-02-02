@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background: bisque;
+        display: flex;
+        align-items: top;
+        justify-content: space-around;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    li {
+        margin: 20px;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .ani {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 150px;
+        background: blanchedalmond;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+
+
+    .ani::before {
+        content: "";
+        position: absolute;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0);
+        height: 40px;
+        width: 150px;
+        transform: translateX(-300px);
+        transition: all 1s;
+        border-bottom: black solid 4px;
+    }
+
+    .ani:hover::before {
+        position: absolute;
+        transform: translatex(0);
+
+    }
+
+    .ani::after {
+        content: "";
+        position: absolute;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0);
+        height: 40px;
+        width: 150px;
+        transform: translateX(-300px);
+        transition: all 1s;
+        border-top: black solid 4px;
+    }
+
+    .ani:hover::after {
+        position: absolute;
+        transform: translatex(0);
+
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="" class="ani">Home</a></li>
+            <li><a href="" class="ani">About</a></li>
+            <li><a href="" class="ani">Services</a></li>
+            <li><a href="" class="ani">Portfollio</a></li>
+            <li><a href="" class="ani">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

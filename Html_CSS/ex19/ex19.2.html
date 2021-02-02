@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex19.2</title>
+    <style>
+        body {
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            position: relative;
+            height: 300px;
+            width: 300px;
+            background: blanchedalmond;
+        }
+
+        .box::after {
+            content: "";
+            position: absolute;
+            background: chartreuse;
+            transform: translate(0);
+            height: 300px;
+            width: 300px;
+            transform: translateX(-300px);
+            transition: all 1s;
+        }
+
+        .box:hover::after {
+            transform: translatex(0);
+            background: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
