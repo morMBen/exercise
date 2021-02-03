@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100vh;
+
+        }
+
+        .spiner4 {
+            position: relative;
+            bottom: -100px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: none;
+            animation: jumpingDots 1s infinite linear;
+        }
+
+        @keyframes jumpingDots {
+            0% {
+                box-shadow: -50px -100px 0 0 #376359, 0 -100px 0 0 #376359, 50px -100px 0 0 #376359;
+            }
+
+
+            100% {
+                box-shadow: -50px -150px 0 0 #376359, 0 -100px 0 0 #376359, 50px -100px 0 0 #376359, -50px -150px 0 0 #376359, , -50px -150px 0 0 #376359, ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spiner4"></div>
+</body>
+
+</html>
