@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex24.3</title>
+    <style>
+        body {}
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'sidebar-1 content1  sidebar-2'
+                'footer footer footer';
+            grid-gap: 1rem;
+            text-align: center;
+        }
+
+        .header {
+            grid-area: header;
+            background: red;
+        }
+
+        .sidebar-1 {
+            grid-area: sidebar-1;
+            background: blue;
+        }
+
+        .content1 {
+            grid-area: content1;
+            background: green;
+        }
+
+        .sidebar-2 {
+            grid-area: sidebar-2;
+            background: purple;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: yellow;
+        }
+
+        .header,
+        .sidebar-1,
+        .content1,
+        .sidebar-2,
+        .footer {
+            border-radius: 25px;
+            padding: 2rem;
+        }
+
+        @media(max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    'header header'
+                    'sidebar-1 content1 '
+                    ' sidebar-2 sidebar-2'
+                    'footer footer';
+            }
+        }
+
+        @media(max-width: 500px) {
+            .container {
+                grid-template-areas:
+                    'header'
+                    'sidebar-1'
+                    ' content1 '
+                    ' sidebar-2'
+                    'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Header</h1>
+        </header>
+        <sidebar class="sidebar-1">
+            <h1>Sidebar</h1>
+        </sidebar>
+        <content class="content1">
+            <h1>content</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi possimus repellat voluptate doloremque
+                ducimus earum, quis architecto, repellendus incidunt praesentium, excepturi adipisci voluptatibus
+                exercitationem fuga necessitatibus qui tenetur illum quo?</p>
+        </content>
+        <div class="sidebar-2">
+            <h1>Sidebar 2</h1>
+        </div>
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+
+</html>
