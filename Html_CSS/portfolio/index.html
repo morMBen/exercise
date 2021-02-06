@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Mor Mordechai Ben</title>
@@ -13,13 +16,24 @@
 <body>
     <nav id="main-nav">
         <div class="container">
-            <img src="#" alt="My logo" class="logo ">
+            <!--  -->
+
+            <div class="svg-wrapper">
+                <a href="#section-1" class="logo-link"> </a>
+                <svg>
+                    <rect class="shape" height="50" width="50" />
+                    <div class="logo"></div>
+
+                </svg>
+                <a href="#section-1" class="logo-link"> </a>
+            </div>
+
+            <!--  -->
             <ul class="xs-text">
-                <li><a class="current" href="#section-1"><span>01.</span>Home</a></li>
-                <li><a href="#section-2"><span>02.</span>About</a></li>
-                <li><a href="#section-3"><span>03.</span>Works</a></li>
-                <li><a href="#section-3"><span>04.</span>Services</a></li>
-                <li><a href="#section-3"><span>05.</span>Contact</a></li>
+                <li><a href="#section-2"><span>01.</span>About</a></li>
+                <li><a href="#section-3"><span>02.</span>Works</a></li>
+                <li><a href="#section-4"><span>03.</span>Services</a></li>
+                <li><a href="#section-5"><span>04.</span>Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -27,6 +41,12 @@
         <div class="email-styled-link">
             <a class="xs-text comp-font" href="#">Mor6686@gmail.com</a>
         </div>
+    </div>
+    <div class="styled-left-bottom-element">
+        <a href=""><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-linkedin-in"></i></a>
+        <a href=""><i class="fab fa-codepen"></i></a>
     </div>
     <div id="sections-container">
         <div class="section" id="section-1">
@@ -42,13 +62,39 @@
                 <h3 class="large-text">
                     I let my intelligence to have fun, So i solve problems with ceativity.
                 </h3>
+                <p>I build things for the web. I am autodidact who never stops learning based in israel, Specializing in
+                    building (and occasionally designing) exceptional websites.</p>
+                <div class="btn "><a href="#" class="greenish-text small-text"> Let's Talk</a></div>
             </header>
         </div>
         <div class="section" id="section-2">
+            <div class="about showcase">
+                <h2 class="xm-text section-header" data-type="01. ">About</h2>
+                <div class="grid-sction-1-2">
 
+                    <img src="" alt="">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugiat nesciunt error fuga
+                            reiciendis dolor adipisci dolorum vitae sint similique, rem nihil vel distinctio, blanditiis
+                            excepturi! Iure ullam adipisci repellat!</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="section" id="section-3">
-
+            <div class="works showcase">
+                <h2 class="xm-text section-header" data-type="02. ">My Works</h2>
+            </div>
+        </div>
+        <div class=" section" id="section-4">
+            <div class="services showcase">
+                <h2 class="xm-text section-header" data-type="03. ">Services</h2>
+            </div>
+        </div>
+        <div class=" section" id="section-5">
+            <div class="contact showcase">
+                <h2 class="xm-text section-header" data-type="04. ">Contact</h2>
+            </div>
         </div>
     </div>
 

@@ -1,0 +1,93 @@
+
+/* fonts sizes */
+.xxs-text{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.xs-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.small-text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.xm-text{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 35px;
+}
+.medium-text{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.large-text{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+}
+.xl-text{
+font-size: 60px;
+font-weight: 600;
+line-height: 68px;
+}
+
+/* Text Colors */
+.greenish-text{
+    color: var(--secondary-color);
+  font-family: var(--second-font);  
+}
+.comp-font{
+    font-family: var(--second-font);  
+}
+.light-text{
+    color:var(--light-color);
+}
+
+/* buttons */
+.btn{
+    margin-top: 2rem;
+    display: inline-block;
+    padding:1.2rem 1.8rem;
+    background: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    
+    /* need to add here a transition-delay: 500ms; */
+}
+
+.btn::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: 0.2;  
+    margin-top: 1px;
+    transform: translate(0);
+   transition: all 500ms ease-in-out;
+}
+.btn:hover::before{
+    transform: translatex(0);
+    background: var(--secondary-color);
+}
+
+/* Utilities */
+.container{
+    max-width: var(--max-width);
+    margin: auto;
+    /* overflow: hidden; */
+}
+.grid-sction-1-2{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    align-items: center;
+}
