@@ -87,7 +87,27 @@ ul{
 #section-1 .showcase p{
     width: 70%;
 }
+#section-2 .showcase p{
+    margin-bottom: 1.1rem;
+}
 
+#section-3 .experience{
+    height: 60vh;
+    width: 65%;
+}
+
+#section-3 .showcase .grid-sction-2-3 p{
+    margin:1rem;
+}
+
+#section-4 .showcase
+{
+height: 70vh;    
+}
+#section-5 .showcase{
+    height: 50vh;
+    width: 50%;
+}
 
 .showcase{
     width: 75%;
@@ -130,6 +150,7 @@ ul{
   
   #main-nav ul li a:hover {
     color: var(--secondary-color);
+    transition: all 500ms ease-in-out;
   }
 
 
@@ -145,6 +166,13 @@ height: 40px;
     position: absolute;
     top: 0;
     transition:all 1s ease-in-out;
+}
+
+.logo-link{
+    z-index: 2;
+    position: fixed;
+    width: 50px;
+    height: 50px;
 }
 
 .svg-wrapper {
@@ -169,48 +197,108 @@ height: 40px;
     background: var(--light-color);
   }
 
-  /*right bottom side static email  */
-.styled-right-bottom-element{
+
+
+  /*right and left bottom side static email  */
+
+.styled-element{
     position: fixed;
-    bottom: 9rem;
-    right: 3rem;
-    transform:rotate(90deg) ;
-    
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    width: 2rem;
+    bottom:0%;
 }
-.styled-right-bottom-element::after{
+
+.right-bottom-element{
+    right: 3rem;
+}
+.left-bottom-element{
+    left: 3rem;
+}
+.styled-bottom-link{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: inherit;
+}
+.linked-mail{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    transform:rotate(90deg);
+    margin-top: 4rem;
+}
+.styled-bottom-link ul li{
+   align-items: center;
+   margin-top: 0.3rem;
+   display: list-item;
+}
+.styled-bottom-link ul li a{
+    position: relative;
+    display: inline-block;
+}
+.styled-bottom-link ul li a:hover{
+    transform: translateY(-0.2rem);
+    color: var(--secondary-color);
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+    box-sizing: inherit;
+}
+
+.right-bottom-element .styled-bottom-link  a:hover{
+    color: var(--secondary-color);
+    margin-top:3.8rem;
+    transition: all 500ms ease-in-out;
+}
+
+.styled-element::after{
     content: "";
     position: absolute;
     background: var(--primary-color);
-    width: 100%;
-    height: 1px;
-    margin-left: 10.5rem;
-    margin-top: -0.75rem;
-  
-}
-.styled-right-bottom-element:hover{
-    margin-bottom: 0.5rem;  
-    transition: all 400ms ease-in-out;
-}
-.email-styled-link:hover a {
-    color:  var(--secondary-color);
-    transition: all 400ms ease-in-out;
-}
-/*  */
-.styled-left-bottom-element{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    bottom: 8rem;
-    left: 3rem;
-
-}
-/*  */
-
-.logo-link{
-    z-index: 2;
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    display: ;
+    width: 1px;
+    height: 130px;
+    bottom: 0;
+    margin-right: 3px;
 }
 
+/* About */
+.about{
+    height: 30rem;
+}
+
+/* Services */
+#section-4 .showcase ul li{
+    font-family: var(--second-font);
+    margin-top: 0.5rem;
+}
+ /* Contact */
+ #section-5 .contact{
+     text-align: center;
+ } 
+
+ /* form */
+ .my-form input{
+     background-color: var(--primary-color);
+     font-size: 16px;
+     padding: 0.5rem;
+     font-family: var(--second-font);
+     width:22rem;
+     height: 2.3rem;
+     margin-top: 0.8rem;
+     border-radius: 5px;
+     color: var(--secondary-color);
+     border: none;
+ }
+ .my-form input:focus{
+     outline-style: none;
+ }
+ .my-form input:nth-child(4){
+     background-color:var(--secondary-color);
+     opacity: 0.8;
+     color: var(--dark-color);
+     font-size: 20px;
+     height: 2.6rem;
+     
+ }

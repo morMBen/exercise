@@ -1,40 +1,40 @@
 
 /* fonts sizes */
 .xxs-text{
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 1rem;
 }
 .xs-text{
-    font-size: 14px;
+    font-size: 0.88rem;
     font-weight: 400;
-    line-height: 14px;
+    line-height: 0.88rem;
 }
 .small-text{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 1.13rem;
 }
 
 .xm-text{
-    font-size: 30px;
+    font-size: 1.88rem;
     font-weight: 600;
-    line-height: 35px;
+    line-height: 2.19rem;
 }
 .medium-text{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 .large-text{
-    font-size: 40px;
+    font-size:2.5rem;
     font-weight: 600;
-    line-height: 44px;
+    line-height: 2.75rem;
 }
 .xl-text{
-font-size: 60px;
+font-size:3.75rem;
 font-weight: 600;
-line-height: 68px;
+line-height: 4.25rem;
 }
 
 /* Text Colors */
@@ -59,8 +59,6 @@ line-height: 68px;
     border-radius: 3px;
     position: relative;
     overflow: hidden;
-    
-    /* need to add here a transition-delay: 500ms; */
 }
 
 .btn::before{
@@ -80,14 +78,130 @@ line-height: 68px;
     background: var(--secondary-color);
 }
 
+.smaller-btn{
+    margin:auto;
+    padding:0.4rem 1rem;
+}
+
+/* ul style */
+.column-list{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 /* Utilities */
 .container{
     max-width: var(--max-width);
     margin: auto;
-    /* overflow: hidden; */
 }
+.content{
+    margin: 1rem;
+}
+
 .grid-sction-1-2{
     display: grid;
     grid-template-columns:1fr 2fr;
+    align-items: flex-start;
+}
+
+.grid-sction-1-1{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    align-items: flex-start;
+}
+
+.grid-sction-2-3{
+    display: grid;
+    grid-template-columns:2fr 3fr 2fr;
+    align-items:center;
+}
+
+.flex-section{
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+/* Box sizes */
+.medium-box{
+    height: 16rem;
+    width: 16rem;
+    border-radius: 5px;  
+}
+
+/* image glow element */
+.img-element img{
+    z-index: 1;
+}
+.img-element{
+    position: relative;
+    background: #f3f3f3;
+    align-self: flex-start;
+    overflow: unset;
+    z-index: 2;
+}
+.img-element::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--secondary-color);
+    opacity: 0.5;
+    border-radius: 5px;
+    border:var(--secondary-color) 2px solid;
+    z-index: 2;
+}
+.img-element:hover::before{
+    opacity: 0;
+    transition:all 500ms ease-in-out;
+    border-radius: 5px;
+    z-index: 2;
+}
+.img-element::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    top: 20px;
+    right: 20px;
+    border:var(--secondary-color) 2px solid;
+    z-index: 0;
+}
+.img-element:hover:after{
+    top:15px;
+    right: 15px;
+    transition:all 300ms ease-in;
+}
+
+/* data type use */
+.get-info-on-page{
+    position: relative;
+    overflow: unset;
+    
+}
+.get-info-on-page::after{
+    content:attr(data-type);
+    position:absolute;
+    display: flex;
+    width:200%;
+    right: 120%;
+    top:-80px;
+    background: var(--dark-color);
+    color: var(--light-color);
+    transform:scaley(0);
+    padding: 1rem;
+    opacity:unset;
+    border: solid 2px var(--secondary-color);
+    border-radius:10px;
+    font-family: var(--second-font);
+}
+.get-info-on-page:hover::after{
+    transform:scale(1.2);
+    transition: all 1s;
+    color: var(--light-color);
+    background: var(--dark-color);
+    opacity:unset;
+    z-index: 1;
 }
