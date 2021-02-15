@@ -1,0 +1,66 @@
+/* font colors */
+.white_text{
+    color: #ffffff;
+}
+.light_grey{
+    color: #cccccc;
+}
+.light_black{
+    color:#555;
+}
+
+.orange_hover_text:hover{
+    color: #e47911;
+}
+
+
+
+/* borders */
+.orange_hover_bottom_border{
+    border-bottom: 2px solid transparent;
+}
+.orange_hover_bottom_border:hover{
+border-bottom: 2px solid #e47911;
+}
+
+
+/* font sizes */
+.xxs_font{
+    font-weight: 400;
+    size: 12px;
+    line-height: 14px;
+}
+
+.xs_font{
+    font-weight: bold;
+    size:14px;
+    line-height: 15px;
+}
+.ms_font{
+    font-weight: 400;
+    size: 15px;
+    line-height: 15px;
+}
+
+.bolding{
+    font-weight: bold;
+}
+
+
+
+
+
+
+.white_border{
+    border: solid 1px transparent;
+}
+.white_border:hover{
+    border: solid 1px #ffffff;
+    border-radius: 2px;
+}
+.return_orders{
+width: 76px;
+}
+
+
+
