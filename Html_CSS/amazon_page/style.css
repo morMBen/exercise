@@ -351,24 +351,162 @@ border-bottom: 1px solid rgba(0,0,0,.2);
 }
 /* left main page */
 .main_page_left_pic_box{
-
+    width: 44px;
+    max-height: 100%;
+    display: flex-column;
+    padding:4px;
+    margin-top: 8px;
 }
+.small_center_left_img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #a2a6ac;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.small_center_left_img:hover{
+    box-shadow: 0 0 5px #e77600;
+    cursor: pointer;
+    border: 1px solid #e77600;
+}
+
+.img_center_1{
+    background: url(/img/motu_avp_large2.jpg);
+    background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.img_center_2{
+    background: url(/img/motu_avp_large.jpg);
+    background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.img_center_3{
+    background: url(/img/motu_avp_large3.jpg);
+    background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.img_center_4{
+    background: url(/img/motu_avp_large4.jpg);
+    background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.img_center_5{
+    background: url(/img/motu_avp_large5.jpg);
+    background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+
 
 /* larg img main page */
 .main_page_large_pic_box{
     max-height: 100%;
     display: flex;
-    flex: 2;
-    max-width: 100%;
-    background: url(/img/motu_avp_large.jpg) no-repeat center center/cover;
+    flex: 9;
+    margin:0 7px ;
 }
+
+.larg_img{
+    max-height: 100%;
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    background-image: url(/img/motu_avp_large2.jpg);
+    background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: contain;
+  align-items:center;
+  justify-content: center;
+  display: flex;
+}
+.larg_img_description{
+    margin-top: 70%;
+    color: #565959;
+}
+
 /* main content of products */
 .main_content_box{
     max-height: 100%;
     display: flex-column;
-    flex: 2;
+    flex: 7;
     max-width: 100%;
+    margin: 5px;
+    padding-right: 20px;
 }
+
+.main_products_title{
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #0f1111;
+}
+
+.brand_div{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#007185;
+    cursor: pointer;
+}
+.brand_div:hover{
+    color:#c7511f;
+    text-decoration-line: underline;
+}
+.product_rating{
+    display: flex;
+    flex-direction: co;
+    height: 21px;
+    max-width: 100%;
+    margin-bottom: 3px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    
+}
+
+.stars_icon{
+    width: 80px;
+    height: 18px;
+    background: url(/img/stars\ icon.png)-84px -7px;
+}
+.rating_and_answers{
+    margin: auto;
+    display: flex;
+}
+.rating_and_answers p{
+    margin:0 6px;
+}
+
+.price_box_main_content{
+    margin-top: 15px;
+    display: flex;
+    color: #565959;
+    margin-bottom: 10px;
+}
+.price_inner_box{
+    display: flex-column;
+    margin-left: 10px;
+}
+
+.main_item_list_specify{
+    list-style: circle;
+    display: flex-column;
+    width: 100%;
+}
+.list_specify{
+    list-style:disc;
+    width: 90%;
+    margin-left: 10%;
+}
+.top_art_center_page{
+    margin-bottom: 10px;
+}
+/* right main content */
 .right_content_cart_box{
     width: 300px;
     height: 570px;
@@ -377,4 +515,8 @@ flex-direction: column;
 padding: 14px 18px 14px 18px;
 border: 1px solid rgba(0,0,0,.2);
 border-radius: 8px;
+}
+
+.right_content_cart_box p{
+    margin-bottom: 10px;
 }

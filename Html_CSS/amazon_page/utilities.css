@@ -9,10 +9,26 @@
     color:#555;
 }
 
+.dark_text{
+   color: #0f1111;
+   font-weight: 700;
+   line-height: 20px;
+}
+
 .orange_hover_text:hover{
     color: #e47911;
 }
 
+.red_font{
+    color:#b12704;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.small_light{
+    font-size: 12px;
+    color:#565959;
+}
 
 
 /* borders */
