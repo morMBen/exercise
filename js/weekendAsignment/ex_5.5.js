@@ -1,11 +1,5 @@
 const abbreviateTwoWords = (str) => {
-    let init = str.slice(0, 1)
-    let temp;
-    while (str.indexOf(' ') !== -1) {
-        init += `.${str.slice(str.indexOf(' '), str.indexOf(' ') + 1)}`
-        temp =
-    }
-    return init;
+    return (str.slice(0, 1) + '.' + str.split(' ')[1].slice(0, 1)).toUpperCase();
 }
 
-console.log(abbreviateTwoWords('Mordech iBen'));
+console.log(abbreviateTwoWords('mordech ben'));
