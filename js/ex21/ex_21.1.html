@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Please enter your age</h2>
+
+    <input type="text" data-age="age-check">
+    <button type="submit" name="submit">click me</button>
+    <script>
+
+        const button = document.querySelector("button[name='submit']");
+        const textInput = document.querySelector("input[data-age='age-check']");
+
+        const canDrinkBeer = 'You can drink beer ☺';
+        const canotDrinkBeer = "You're too young :(";
+        const pleaseInsart = "You havent wrote nothing, please try agine";
+        const enterOnlyNumber = "You must enter a number";
+
+
+        const userMassge = document.createElement('h3');
+        document.body.appendChild(userMassge);
+        const checkAge = (event) => {
+            if (Number(textInput.value) && !(textInput.value === '')) {
+                if (textInput.value >= 18) {
+                    userMassge.textContent = canDrinkBeer;
+                } else {
+                    userMassge.textContent = canotDrinkBeer;
+                }
+            } else {
+                if (textInput.value === '') {
+                    userMassge.textContent = pleaseInsart;
+                }
+                else {
+                    userMassge.textContent = enterOnlyNumber;
+
+                }
+
+            }
+            textInput.value = '';
+        }
+
+        button.addEventListener("click", checkAge)
+
+    </script>
+</body>
+
+</html>
