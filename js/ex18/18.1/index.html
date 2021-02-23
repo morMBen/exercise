@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            flex-wrap: wrap;
+        }
+
+        .smileyClass {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="textInput">How many smileys do you want to see</label>
+
+    <input type="text" id="textInput">
+    <input type="submit" id="submit">
+    <div class="myDiv"></div>
+    <script>
+        const smiley = document.createElement("img");
+        const button = document.querySelector("#submit");
+        const userInput = document.querySelector("#textInput");
+        const myDiv = document.querySelector('.myDiv');
+
+        smiley.classList.add('pic');
+        smiley.classList.add("smileyClass");
+
+        const imgUrl = "https://cdn.pixabay.com/photo/2016/08/21/18/48/emoticon-1610518__340.png";
+
+
+
+
+        button.addEventListener('click', () => {
+            let tempNum = Number(userInput.value);
+            let smileyHTML = `<img src=${imgUrl} class="smileyClass">
+        `;
+            tempSmile = '';
+            if (tempNum) {
+                for (let i = 0; i < tempNum; i++) {
+                    tempSmile += smileyHTML;
+                }
+                const html = `<div>
+            ${tempSmile}
+            </div>`;
+                myDiv.innerHTML = html;
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

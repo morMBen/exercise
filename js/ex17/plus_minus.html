@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>hello there</h4>
+    <button data-plus>+</button>
+    <button data-minus>-</button>
+
+    <!-- not a good way using id -->
+    <!-- <button id="increase">+</button>
+    <button id="decrease">-</button> -->
+
+
+
+</body>
+<script>
+    const text = document.querySelector("h4");
+    const increase = document.querySelector("[data-plus]");
+    const decrease = document.querySelector("[data-minus]");
+    let fontSize = parseInt(window.getComputedStyle(text).fontSize);
+
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+
+            console.log(event.target.textContent);
+        })
+    })
+
+
+
+    // const increaseFont = (num) => {
+    //     if (fontSize < 100) {
+    //         fontSize += num;
+    //         text.style.fontSize = `${fontSize}px`;
+    //         console.log(fontSize);
+    //     }
+    // }
+
+    // increase.addEventListener("click", () => increaseFont(5));
+
+
+    // increase.addEventListener("click", () => {
+    //     if (fontSize < 100) {
+    //         fontSize += 5;
+    //         text.style.fontSize = `${fontSize}px`;
+    //         console.log(fontSize);
+    //     }
+    // })
+    // decrease.addEventListener("click", () => {
+    //     if (fontSize > 5) {
+    //         fontSize -= 5;
+    //         text.style.fontSize = `${fontSize}px`;
+    //         console.log(fontSize);
+    //     }
+    // })
+
+    console.log(fontSize);
+
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>How many smiley's?</h3>
+    <input type="text" name="smiley">
+    <button>submit</button>
+    <div class="smileyContainer"></div>
+
+
+    <script>
+        const button = document.querySelector("button").addEventListener("click", () => {
+            const inputValue = parseInt(document.querySelector("input[name='smiley']").value);
+
+            if (Number.isInteger(inputValue)) {
+                if (document.querySelector("img")) {
+                    document.querySelector(".smileyContainer").innerHTML = "";
+                }
+                for (let i = 0; i < inputValue; i++) {
+                    const img = document.createElement("img");
+                    // console.dir(img);//let you see all you can do with the element/
+                    img.src = "https://cdn.pixabay.com/photo/2016/08/21/18/48/emoticon-1610518__340.png";
+                    document.querySelector(".smileyContainer").appendChild(img);
+                }
+            } else {
+                alert('Not a Number');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

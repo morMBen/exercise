@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>title 1</li>
+        <li class="start-here">title 2</li>
+        <li>
+            <ul>
+                <li>sub title 1</li>
+                <li>sub title 2</li>
+                <li>sub title 3</li>
+            </ul>
+        </li>
+        <li>title 3</li>
+    </ul>
+    <div>
+        <p>Hello World!</p>
+    </div>
+</body>
+
+<script>
+    const list2 = document.querySelector('.start-here');
+    list2.textContent = 'start-here'
+
+    const innerUl = document.querySelector("ul").lastElementChild.previousElementSibling.firstElementChild;
+    const newListEl = list2.cloneNode('true');
+    newListEl.textContent = 'sub title 4';
+    innerUl.insertAdjacentElement("beforeEnd", newListEl)
+
+    const lastListChild = document.querySelector("ul");
+    lastListChild.lastElementChild.remove();
+
+    const pageTitle = document.querySelector("title");
+    pageTitle.textContent = "Master Of The Dom"
+
+    const paragraphChaing = document.querySelector("p");
+    paragraphChaing.textContent = "It's a new subject for me and i like it ☺"
+    console.log(pageTitle);
+
+
+</script>
+
+</html>
