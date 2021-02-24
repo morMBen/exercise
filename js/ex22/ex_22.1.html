@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            font-size: 20px;
+            background: lightgray;
+            font-family: cursive;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        input {
+            margin-top: 10px;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="my-form">
+        <label for="name">Please enter your name</label>
+        <input type="text" name="name">
+        <label for="number">Please enter your age</label>
+        <input type="number" name="age">
+        <label for="email">Please enter your E-mail</label>
+
+        <input type="email" name="email">
+        <input type="submit">
+    </form>
+
+
+    <script src="ex_22.1.js"></script>
+</body>
+
+</html>
