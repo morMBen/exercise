@@ -1,0 +1,79 @@
+<!-- live lecture summary of this evening.
+Things to take away with you:
+Don't create an id or a class just to select an element in JS. Use custom data attributes for that
+Don't use the onclick attribute because it will override previous listeners. Use addEventListener to add multiple events to the same element
+If you want to add a argument to a function that is in an event listener create a function before it, or else it will invoke it right away.
+How to add an event listener to multiple elements in a forEach method.
+Don't worry about that event value we get from the addEventListener. We will go more deeply to that subject later on this week.
+Tomorrow we will go over some other important exercises. As always this is new stuff for you guys, but we will do this again and again, and soon it will become easier for you all :slightly_smiling_face: -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Hello there</h4>
+    <!--If you want to select an element with no styling purposes best practice is with custom data attributes not by ids or classes. This was the old way of doing things -->
+    <h5>Getting elements by id</h5>
+    <div><button id="increase">+</button><button id="decrease">-</button></div>
+    ​
+    <h5>Getting elements by attribute</h5>
+    <button data-plus>+</button><button data-minus>-</button>
+</body>
+<script>
+    const text = document.querySelector("h4");
+    const increase = document.querySelector("[data-plus]");
+    const decrease = document.querySelector("[data-minus]");
+
+    //best practice to get the default styling of a element with getComputedStyle incase a user overrides the default font size for example
+    let fontSize = parseInt(window.getComputedStyle(text).fontSize);
+    //we need to parseInt the value because it returns a string
+
+    //We should use onclick method because it will override any other event listeners we apply to the same element.
+    //With Add event listener we can apply multiple event listeners to the same element
+    const myBtn = document.querySelector("#increase");
+    myBtn.onclick = () => {
+        console.log("i am clicked");
+    };
+    myBtn.onclick = () => {
+        console.log("i am clicked again");
+    };
+
+    //solution:
+    increase.addEventListener("click", () => {
+        if (fontSize < 100) {
+            fontSize += 5;
+            text.style.fontSize = `${fontSize}px`;
+        }
+    });
+    decrease.addEventListener("click", () => {
+        if (fontSize > 6) {
+            fontSize -= 5;
+            text.style.fontSize = `${fontSize}px`;
+        }
+    });
+
+    //we can attach an event listener to multiple elements like this below
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            console.log(event.target.textContent);
+            console.log("i am clicked");
+        });
+    });
+
+    const increaseFont = (number) => {
+        console.log("i am envoked");
+        if (fontSize < 100) {
+            fontSize += number;
+            text.style.fontSize = `${fontSize}px`;
+        }
+    };
+    //if I want to give an argument to a function in an event listener I need to give it first an function before it so it won't get invoked right away
+    increase.addEventListener("click", () => increaseFont(5));
+</script>

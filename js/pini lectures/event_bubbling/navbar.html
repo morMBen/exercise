@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        height: 5vh;
+      }
+      ul,
+      li {
+        background: orange;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        text-decoration: none;
+        margin: 1rem;
+      }
+      #hero {
+        height: calc(100vh - 5vh);
+        background: blue;
+      }
+      #news {
+        height: 100vh;
+        background: chocolate;
+      }
+      #contact {
+        height: 100vh;
+        background: green;
+      }
+      #about {
+        height: 100vh;
+        background: purple;
+      }
+    </style>
+    <nav>
+      <ul>
+        <li><a class="nav_link" href="#news">News</a></li>
+        <li><a class="nav_link" href="#contact">Contact</a></li>
+        <li><a class="nav_link" href="#about">About</a></li>
+      </ul>
+      <section id="hero"></section>
+      <section id="news"></section>
+      <section id="contact"></section>
+      <section id="about"></section>
+    </nav>
+    <script>
+      document.querySelector("ul").addEventListener("click", (e) => {
+        e.preventDefault();
+        // add event listener to common parent
+        //matching strategy
+        if (e.target.classList.contains("nav_link")) {
+          // or
+          // if(id){
+
+          // }
+          const id = e.target.getAttribute("href");
+          console.log(id);
+          document.querySelector(id).scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

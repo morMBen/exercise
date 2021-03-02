@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul id="fruits">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="guava">Guava</li>
+        <li id="grapes">Grapes</li>
+       <li id="orange">Orange</li>
+    </ul>
+
+    <script>
+        /*
+        What will happen in the future our categories will increase to 50? With this logic we have to attach 50 event listeners.
+        We can do event delegation. We can create a click event to the parent. When I click on of the children, due to bubbling it will bubble up until it reaches the parent
+        */
+       document.querySelector("#fruits").addEventListener("click",(e)=> {
+           console.log(e.target.id + "clicked");
+           alert(e.target.id + "clicked")
+
+       })
+//      const apple = document.querySelector('#apple');
+//     apple.addEventListener('click', (event) => {
+//       console.log("Apple clicked");
+//       alert("Apple clicked");
+//     });
+  
+//     const banana =  document.querySelector('#banana');
+//     banana.addEventListener('click', (event) => {
+//       console.log("Banana clicked");
+//      alert("Banana clicked");
+//     });
+    
+//     const guava =  document.querySelector('#guava');
+//     guava.addEventListener('click', (event) => {
+//       console.log("Guavava clicked");
+//       alert("Guavava clicked");
+//     });
+  
+//     const grapes =  document.querySelector('#grapes');
+//     grapes.addEventListener('click', (event) => {
+//       console.log("Greps clicked");
+//       alert("Greps clicked");
+//     });
+  
+//    const orange =   document.querySelector('#orange');
+//     orange.addEventListener('click', (event) => {
+//       console.log("Orange clicked");
+//       alert("Orange Clicked");
+//     });
+    </script>
+  </body>

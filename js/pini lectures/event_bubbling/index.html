@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <style>
+      *:not(html, body) {
+        padding: 1rem;
+        border: 1px solid black;
+      }
+    </style>
+    <div class="container">
+      container
+      <ul id="fruits">
+        fruits
+        <!-- <li id="oranges">oranges</li> -->
+        <li id="apple">apple</li>
+      </ul>
+    </div>
+    <script>
+      /*
+      When a child element is clicked the event will bubble up to its parents and if they have an event listener with the same event it will register it. it does not bubble to its siblings
+      */
+
+      document.querySelector(".container").addEventListener("click", (e) => {
+        // console.log(e.currentTarget);
+        // console.log(e.target);// if clicked on apple it will show the original target
+
+        console.log("container clicked");
+      });
+      document.querySelector("#fruits").addEventListener("click", (e) => {
+        console.log("fruits clicked");
+      });
+
+      document.querySelector("#apple").addEventListener("click", (e) => {
+        // e.stopPropagation();// to prevent it from bubbling up
+        console.log("apple clicked");
+      });
+      // document.querySelector("#oranges").addEventListener("click", () => {
+      //   console.log("orange clicked");
+      // });
+    </script>
+  </body>
+</html>
