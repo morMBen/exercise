@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="/style.css">
+    <title>Corona API</title>
+</head>
+
+<body>
+    <nav class="navbar">
+
+    </nav>
+    <main class="container">
+        <div class="chart">
+            <canvas id="myChart">
+                <p>Canvas</p>
+            </canvas>
+        </div>
+        <div class="botton_box">
+            <div class="statistic_bottons">
+                <button id='stat_button' class="asia">Confirmed</button>
+                <button id='stat_button' class="europe">Deaths</button>
+                <button id='stat_button' class="africa">Recovered</button>
+                <button id='stat_button' class="oceania">Critical</button>
+            </div>
+            <br>
+            <div class="region_bottons">
+                <button id='region' class="asia">Asia</button>
+                <button id='region' class="europe">Europe</button>
+                <button id='region' class="africa">Africa</button>
+                <button id='region' class="americas">Americas</button>
+                <button id='region' class="oceania">Oceania</button>
+                <button id='region' class="oceania">World</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>

@@ -49,11 +49,7 @@
         }
 
         h3 {
-            text-overflow: ellipsis;
-            /* overflow: hidden; */
-            overflow-wrap: break-word;
-            height: 20px;
-            margin-bottom: 2rem;
+
             text-overflow: clip;
         }
 
@@ -63,6 +59,7 @@
             text-decoration: none;
             color: #333;
         }
+
 
         span {
             color: darkblue;
@@ -77,9 +74,11 @@
         }
 
         .card {
-
+            display: grid;
+            justify-content: start;
+            grid-template-rows: repeat(14, max-content);
             padding: 20px;
-            width: 30%;
+            width: 400px;
         }
 
         .inner {

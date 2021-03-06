@@ -28,7 +28,7 @@ async function fetchMovie(query) {
             const userCard = document.createElement('div');
             userCard.classList.add("card");
             userCard.innerHTML = `
-            <img src="${dataID.Poster} width="200px">     
+            <img src="${dataID.Poster} width="100%">     
             <h3>${e.Title}</h3>
             <p><span>Genre:</span> ${dataID.Genre}</p>
             <p><span>Year:</span> ${e.Year}</p>
