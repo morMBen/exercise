@@ -8,9 +8,12 @@
 //      https://restcountries.herokuapp.com/api/v1/region/:region_name
 // make a loop over eche country and set them in the right object with name and 
 const statButtons = document.querySelector('.statistic_bottons');
+const selectors = document.querySelector('.selectors');
 const regionButtons = document.querySelectorAll('#region');
 const statButton = document.querySelectorAll('#stat_button');
-const ctx = document.getElementById('myChart').getContext('2d');
+const specific = document.querySelector('.specific');
+const ctx = document.getElementById('myChart');
+const ctx2 = document.getElementById('myChart2');
 const contries = {};
 const world = [];
 const regions = {};
@@ -18,6 +21,7 @@ let sortedRegions = {};
 let currntStat = 'confirmed';
 let currentRegion = '';
 let currntChartD = 'bar';
+let selectorsVisibility = false;
 let chart;
 
 
@@ -25,7 +29,7 @@ let chart;
 
 
 async function fetchCountries() {
-    const response = await fetch('https://api.allorigins.win/raw?url=https://restcountries.herokuapp.com/api/v1');
+    const response = await fetch('http://api.allorigins.win/raw?url=https://restcountries.herokuapp.com/api/v1');
     const data = await response.json();
     data.forEach(e => {
         contries[e.cca2] = { name: e.name.common, region: e.region, subregion: e.subregion, };
@@ -114,23 +118,19 @@ function checkStatOfContry() {
 function setButtons() {
     regionButtons.forEach(e => {
         e.addEventListener('click', () => {
-            console.log(getRegionStat(e.textContent, currntStat));
+            ctx2.style.visibility = 'hidden';
             chart.config.data.labels = getRegionCounrties(e.textContent, currntStat);
             chart.config.data.datasets[0].data = getRegionStat(e.textContent, currntStat);
             chart.config.data.datasets[0].label = `Number of ${currntStat} in ${e.textContent}`;
-            // console.log(e.textContent);
             chart.update();
-            if (e.textContent === 'world') {
-
-            }
-            else {
-            }
-            chart.update();
-            if (statButtons.style.visibility === '') {
+            if (statButtons.style.visibility === '' || statButtons.style.visibility === 'hidden') {
                 statButtons.style.visibility = 'visible';
+                ctx.style.visibility = 'visible';
             }
             currentRegion = e.textContent;
-            // console.log(currentRegion);
+            // console.log(e.textContent);
+            selectors.innerHTML = '';
+            setSelectors(e.textContent);
         })
     })
 }
@@ -142,6 +142,7 @@ function setStatButton() {
             chart.config.data.datasets[0].label = `Number of ${e.textContent.toLowerCase()} in ${currentRegion}`
             chart.update();
             currntStat = e.textContent.toLowerCase();
+
         })
     })
 }
@@ -160,11 +161,9 @@ function getAllWorldArray() {
 async function starter() {
     await fetchCountries();
     await checkStatOfContry();
-    await theTop25();
+    theTop25();
     setButtons();
     setStatButton();
-    // console.log(sortedRegions);
-    // console.log(contries);
 }
 starter();
 
@@ -185,7 +184,46 @@ function theTop25() {
     });
 }
 
+function setSelectors(region) {
+    (region === 'World' ? world : regions[region]).forEach(e => {
+        const button = document.createElement('button');
+        button.textContent = contries[(region === 'World' ? e.id : e)].name;
+        selectors.appendChild(button);
+        button.addEventListener('click', () => {
+            statButtons.style.visibility = 'hidden';
+            ctx.style.visibility = 'hidden';
+            getSpecific((region === 'World' ? e.id : e));
+        })
+    })
+}
 
+async function getSpecific(cName) {
+    const response = await fetch(`https://corona-api.com/countries/${cName}`);
+    const data = await response.json();
+    console.log(data);
+    specific.style.visibility = 'visible';
+    ctx2.style.visibility = 'visible';
+    chart2 = new Chart(ctx2, {
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ['Total cases', 'New cases', 'Total deaths', 'New deaths', 'Total recovered', 'In critical condition'],
+            datasets: [{
+                label: `Statistics of ${contries[cName].name} `,
+                backgroundColor: ['#173F5F', '#20639B', '#ED553B', '#F6D55C', '#3CAEA3', 'red'],
+                borderColor: '#20639b',
+                data: [data.data.latest_data.confirmed, data.data.today.confirmed, data.data.latest_data.deaths, data.data.today.deaths, data.data.latest_data.recovered, data.data.latest_data.critical],
+            }]
+        },
+        // Configuration options go here
+        options: {
+            responsive: false,
+            borderAlign: 'center'
+            // events: ['click'],
+        }
+    });
+}
 
 
 
