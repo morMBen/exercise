@@ -105,3 +105,6 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 .hidden{
     visibility: hidden;
 }
+.cursorP{
+    cursor: pointer;
+}

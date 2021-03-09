@@ -109,6 +109,9 @@ class ToDo {
         })
         return temp;
     }
+    setDownLoad(arr) {
+        this.list = arr;
+    }
 }
 
 
@@ -116,7 +119,7 @@ let td = new ToDo();
 // td.addTask(new Task('do'))
 getNewInputs();
 edit();
-
+// getLocal();
 
 
 // console.log(JSON.parse(localStorage.getItem('todoList')))
@@ -188,11 +191,21 @@ function edit() {
                 taskDiv.innerHTML = tempPriority2;
                 break;
         }
-        // console.log(e.target.classList[0]);
 
-        // console.log(Number(e.target.parentElement.id));
     })
 }
+
+function onLoad() {
+    let tempList = JSON.parse(localStorage.getItem('todoList'));
+    taskDiv.innerHTML = setTopList();
+    for (let i = 0; i < tempList.list.length; i++) {
+        taskDiv.innerHTML += setInnerLi(tempList.list[i]);
+    }
+    td.setDownLoad(tempList.list);
+    console.log(td.list);
+}
+
+
 //utilites 
 function setInnerLi(task) {
     return `
@@ -212,10 +225,10 @@ function setTopList(sort = 'U', prio = 'U') {
     return `<li class="top_task_list">
 <h4>Id</h4>
 <h4>Task</h4>
-<h4 class="sort_priority${prio}">Priority</h4>
+<h4 class="sort_priority${prio} cursorP">Priority${prio === 'U' ? '↑' : '↓'}</h4>
 <h4 class="sort_date">Date</h4>
 <h4>Time</h4>
-<h4 class="sort_status${sort}">Status</h4>
+<h4 class="sort_status${sort} cursorP">Status${sort === 'U' ? '↑' : '↓'}</h4>
 </li>`
 }
 function getStingDate(today) {
