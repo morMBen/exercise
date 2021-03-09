@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://css.gg/trash.css' rel='stylesheet'>
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="welcome_box">
+            <h2>What I Should Do Now?</h2>
+            <h1>My List...</h1>
+            <div class="inputs_box">
+                <form action="">
+                    <select class="importance" name="importance" id="importance">
+                        <option id="high" value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <input class="new_task" type="text" placeholder="New thing...">
+                    <input class="submit" type="submit" value="Add">
+                </form>
+                <button class="down_load">Down Load Data</button>
+            </div>
+        </div>
+    </div>
+    <div class="task_box">
+        <ul class="task_Ulist">
+            <li class="top_task_list">
+                <h4>Id</h4>
+                <h4>Task</h4>
+                <h4 class="sort_priorityU">Priority</h4>
+                <h4 class="sort_date">Date</h4>
+                <h4>Time</h4>
+                <h4 class="sort_statusD">Status</h4>
+            </li>
+        </ul>
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>
