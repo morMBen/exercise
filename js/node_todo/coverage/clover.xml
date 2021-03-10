@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1615381118659" clover="3.2.0">
+  <project timestamp="1615381118659" name="All files">
+    <metrics statements="29" coveredstatements="5" conditionals="17" coveredconditionals="1" methods="11" coveredmethods="2" elements="57" coveredelements="8" complexity="0" loc="29" ncloc="29" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="E:\code\appleSeeds bootcamp\exercises\js\node_todo\index.js">
+      <metrics statements="29" coveredstatements="5" conditionals="17" coveredconditionals="1" methods="11" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="52" count="0" type="stmt"/>
+      <line num="68" count="1" type="stmt"/>
+      <line num="71" count="1" type="stmt"/>
+      <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="76" count="0" type="stmt"/>
+      <line num="77" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="78" count="0" type="stmt"/>
+      <line num="80" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

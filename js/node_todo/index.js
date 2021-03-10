@@ -1,8 +1,10 @@
 // Lets create a simple todo app with no UI.
 // Create an empty array which you will add your todo items.
 const toDo = [];
-// Create simple functions that will do the following:
-// * Add item (id, task name, isCompleted)
+module.exports = {
+    toDo,
+    AddItem,
+};
 function AddItem(id, taskName, isCompleted = false) {
     toDo.push({
         id,
@@ -10,10 +12,7 @@ function AddItem(id, taskName, isCompleted = false) {
         isCompleted,
     })
 }
-AddItem(5, 'buy');
-AddItem(12, 'work');
-AddItem(50, 'clean');
-// * Delete item
+
 function deleteItemById(taskId) {
     if (typeof taskId === 'number') {
         let index = toDo.findIndex(e => e.id === taskId)
@@ -57,10 +56,10 @@ function markAsUndone(Id) {
 // console.log(deleteItemById(12));
 // console.log(deleteItemByTaskName('buy'));
 
-markAsDone(5);
-markAsDone(12);
-markAsUndone(5);
-console.log(toDo);
+// markAsDone(5);
+// markAsDone(12);
+// markAsUndone(5);
+// console.log(toDo);
 
 
 // * List – returns all the items with their status. Done items
