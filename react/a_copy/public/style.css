@@ -1,0 +1,12 @@
+.box{
+    height: 300px;
+    width:600px;
+    background: blue;
+    text-align: center;
+    padding: 5%;
+}
+.inline_box{
+    height: 90%;
+    width: 90%;
+    background: chartreuse;
+}
