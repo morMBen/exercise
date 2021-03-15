@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+
+
+.cards{
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+.card{
+    margin: 2rem;
+    padding: 1rem;
+    background: lightblue;
+    width:300px;
+}
+.pic{
+    width:100%;
+}
+.title{
+    margin: 0.5rem 0;
+}
+
+.link{
+    text-align:end;
+    margin-right: 1rem;
+    text-decoration: none;
+}
