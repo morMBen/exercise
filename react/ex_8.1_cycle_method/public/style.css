@@ -1,0 +1,22 @@
+.box{
+    height: 300px;
+    width:600px;
+    background: blue;
+    text-align: center;
+    padding: 5%;
+}
+.bigger{
+    height: 90%;
+    width: 90%;
+    background: green;
+}
+.smaller{
+    height: 90%;
+    width: 90%;
+    background: red;
+}
+.equal{
+    height: 90%;
+    width: 90%;
+    background: black;
+}
