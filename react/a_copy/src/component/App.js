@@ -1,11 +1,11 @@
 import React from 'react';
-import Form from './Form';
+import Game from './Game';
 
 class App extends React.Component {
 
     render() {
         return (
-            <Form />
+            <Game />
         )
     }
 }
