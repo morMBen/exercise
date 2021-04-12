@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "postman-request": "*",
+    "request": "^2.88.2"
+  }
+}
