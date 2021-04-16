@@ -1,6 +1,12 @@
 const express = require('express');
+const send = require('send');
 const app = express();
-const { addNewMovie, loadMovies } = require('./utils.js')
+const {
+    addNewMovie,
+    loadMovies,
+    findMovie,
+    updateMovie,
+    deleteMovie } = require('./utils.js')
 
 const PORT = 3000;
 
@@ -20,6 +26,32 @@ app.post("/api/movies", (req, res) => {
     }
 })
 
+app.get("/api/movies/:id", (req, res) => {
+    // console.log(req.params.id);
+    try {
+        res.status(200).send(findMovie(req.params.id))
+    } catch (e) {
+        res.status(400).send({ error: e.message })
+    }
+})
+
+app.put("/api/movies/:id", (req, res) => {
+    const { id } = req.params;
+    const movie = req.body;
+    try {
+        res.status(200).send(updateMovie(id, movie))
+    } catch (e) {
+        res.status(400).send({ error: e.message })
+    }
+})
+
+app.delete("/api/movies/:id", (req, res) => {
+    try {
+        res.status(200).send(deleteMovie(req.params.id))
+    } catch (e) {
+        res.status(400).send({ error: e.message })
+    }
+})
 
 app.listen(PORT, () => {
     console.log("start listening...")
