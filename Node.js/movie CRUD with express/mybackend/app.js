@@ -8,7 +8,7 @@ const {
     updateMovie,
     deleteMovie } = require('./utils.js')
 
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(express.json())
 
