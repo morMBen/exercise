@@ -1,0 +1,46 @@
+Instructions
+1. use findMyRestaurant
+2 db.restaurant.insertMany(<Array>)
+
+1) Crud
+1.1 db.restaurant.find().pretty()
+
+1.2 db.restaurant.find({cuisine:"asian"}).pretty()
+
+1.3 db.restaurant.find({kosher:true}).pretty()
+
+1.4 db.restaurant.find({"address.city":"Holon"}).pretty()
+
+1.5 db.restaurant.findOne({_id:ObjectId("607d5083a1e6fe9bbed5fe9f")}).address
+
+1.6 db.restaurant.findOne({_id:ObjectId("607d5083a1e6fe9bbed5fe9f")}).address.coordinates
+
+1.7 db.restaurant.find().sort({name:1}).pretty()
+
+1.8 db.restaurant.find().sort({"address.city":1}).pretty()
+
+1.9 db.restaurant.updateOne({_id:ObjectId("607d5083a1e6fe9bbed5fe9f")},{$set:{name:"mango jam"}})
+
+1.10 db.restaurant.updateOne({_id:ObjectId("607d5083a1e6fe9bbed5fe9f")},{$push:{reviews:{date: "new Timestamp()",score:2}}})
+
+1.11 db.restaurant.updateMany({},{$set:{kosher:true}})
+
+1.12 db.restaurant.deleteOne({"_id" : ObjectId("607d5083a1e6fe9bbed5fea1")})
+
+1.13 db.restaurant.deleteMany({})
+
+1.14 ??? Sorry did i not make it
+
+1.15 ??? Sorry did i not make it
+
+2.1 db.restaurant.find().forEach(e=>printjson(e.name))
+
+2.2 db.restaurant.find().forEach(e=>print(e.address.city))
+
+2.3 db.restaurant.find().forEach(e=>print(e.address.coordinates))
+
+3.1 db.restaurant.find({name:{$regex:/r/}}).pretty()
+
+3.2 db.restaurant.find().count()
+
+3.3  db.restaurant.find({reviews:{$elemMatch:{date:"2020-01-01"}})
