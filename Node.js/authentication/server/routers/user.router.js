@@ -18,11 +18,19 @@ router
         userController.getUser(req, res);
     })
     .post("/", async (req, res) => {
-        console.log("yup");
         //create user
         try {
             const addUser = await userController.addUser(req, res);
             res.send(addUser)
+        } catch (e) {
+            res.status(400).send(e.message)
+        }
+    })
+    .patch('/:id', async (req, res) => {
+        //update user
+        try {
+            const user = await userController.updateUser(req, res);
+            res.send(user)
         } catch (e) {
             res.status(400).send(e.message)
         }
