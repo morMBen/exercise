@@ -5,8 +5,6 @@
   </a>
 </p>
 
-## Install
-
 ```sh
 npm install
 ```
