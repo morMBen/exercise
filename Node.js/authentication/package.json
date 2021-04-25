@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "server": "nodemon src/index.js"
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.12.5",
+    "path": "^0.12.7",
     "validator": "^13.6.0"
   }
 }

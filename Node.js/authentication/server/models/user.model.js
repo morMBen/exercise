@@ -36,11 +36,20 @@ const userSchema = new mongoose.Schema({
         minlength: 9,
         trim: true,
         validate(value) {
-            if (!value.matches('/^0\d([\d]{0,1})([-]{0,1})\d{7}$/')) {
+            if (!value.match(/^0\d([\d]{0,1})([-]{0,1})\d{7}$/)) {
                 throw new Error('Phone number is not valid, please insert israeli number.')
             }
         }
     }
+})
+
+//middleware
+
+userSchema.pre('save', async function (next) {
+    const user = this
+    user.password = await bcrypt.hash(user.password, 8)
+    console.log('befor saving')
+    next()
 })
 
 const User = mongoose.model('User', userSchema)
