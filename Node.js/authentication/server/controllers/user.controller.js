@@ -1,5 +1,6 @@
-const { findById } = require("../models/user.model");
 const User = require("../models/user.model");
+const auth = require('../middeleware/auth')
+
 
 const getUsers = async (req, res) => {
     let result;
@@ -15,17 +16,17 @@ const addUser = async (req, res) => {
     let result;
     try {
         result = await new User(req.body).save()
+        const token = await result.generateToken()
+        return { result, token }
     } catch (e) {
         throw new Error(e)
     }
-    return result
 }
 
 const updateUser = async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedKeys = ['first', 'last', 'email', 'password', 'phone']
     const isValidKeys = updates.every(update => allowedKeys.includes(update))
-
 
     if (!isValidKeys) {
         throw new Error("error: Invalid updates")
@@ -41,8 +42,21 @@ const updateUser = async (req, res) => {
         throw new Error(e)
     }
 }
+
+const userLogin = async (req, res) => {
+    try {
+        //findByCredentials - madeup function that has been created at the user model
+        const user = await User.findByCredentials(req.body.email, req.body.password)
+
+        const token = await user.generateToken()
+        return { user, token }
+    } catch (e) {
+        res.status(400).send(e)
+    }
+}
 module.exports = {
     addUser,
     getUsers,
-    updateUser
+    updateUser,
+    userLogin
 };

@@ -7,7 +7,7 @@ router
         //get all users
         try {
             const users = await userController.getUsers(req, res);
-            console.log(users)
+            // console.log(users)
             res.send(users)
         } catch (e) {
             res.status(400).send(e.message)
@@ -22,6 +22,15 @@ router
         try {
             const addUser = await userController.addUser(req, res);
             res.send(addUser)
+        } catch (e) {
+            res.status(400).send(e.message)
+        }
+    })
+    .post('/login', async (req, res) => {
+        //user login
+        try {
+            const user = await userController.userLogin(req, res);
+            res.send(user)
         } catch (e) {
             res.status(400).send(e.message)
         }
