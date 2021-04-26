@@ -1,5 +1,4 @@
 const User = require("../models/user.model");
-const auth = require('../middeleware/auth')
 
 
 const getUsers = async (req, res) => {

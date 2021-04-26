@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/user.controller");
+const auth = require('../middeleware/auth')
+
 //find all users
 router
     .get("/", async (req, res) => {
@@ -13,6 +15,18 @@ router
             res.status(400).send(e.message)
         }
     })
+
+    //using authentication
+    .get("/me", auth, async (req, res) => {
+        //get user profile
+        try {
+            // console.log(users)
+            res.send(req.user)
+        } catch (e) {
+            res.status(400).send(e.message)
+        }
+    })
+
     .get("/:id", (req, res) => {
         //get specific user
         userController.getUser(req, res);
