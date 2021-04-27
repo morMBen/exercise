@@ -28,7 +28,7 @@ app.use('/api/', route);
 // With middleware: new request -> do something -> run route handler
 //
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log('listening to port ' + PORT)
 })
