@@ -1,12 +1,22 @@
 import Input from '../input/Input'
 import { useState } from 'react';
 
-const Login = () => {
+const Login = ({ setSignBar }) => {
     const [userFirst, setUserFirst] = useState('');
     const [userLast, setUserLast] = useState('');
     const [userPhone, setUserPhone] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
+
+    const cancel = () => {
+        setUserFirst('')
+        setUserLast('')
+        setUserPhone('')
+        setUserEmail('')
+        setUserPassword('')
+
+        setSignBar(false)
+    }
 
     return (
         <div>
@@ -41,6 +51,10 @@ const Login = () => {
                 value={userPassword}
                 setValue={setUserPassword}
             />
+            <div>
+                <button onClick={cancel}>Cancel</button>
+                <button>Ok</button>
+            </div>
         </div>
     )
 }

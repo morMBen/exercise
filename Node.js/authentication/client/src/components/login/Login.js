@@ -1,9 +1,15 @@
 import Input from '../input/Input'
 import { useState } from 'react';
 
-const Login = () => {
+const Login = ({ setLoginBar }) => {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
+
+    const cancel = () => {
+        setUserEmail('')
+        setUserPassword('')
+        setLoginBar(false)
+    }
 
     return (
         <div>
@@ -20,6 +26,10 @@ const Login = () => {
                 value={userPassword}
                 setValue={setUserPassword}
             />
+            <div>
+                <button onClick={cancel}>Cancel</button>
+                <button>Ok</button>
+            </div>
         </div>
     )
 }

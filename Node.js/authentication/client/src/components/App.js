@@ -28,9 +28,9 @@ function App() {
       <button onClick={fetchAllUsers}>Fetch All users</button>
       <button onClick={addUser}>Add user</button>
       {!signBar && !loginBar && <button onClick={() => setLoginBar(true)}>Log in</button>}
-      {loginBar && <Login />}
+      {loginBar && <Login setLoginBar={setLoginBar} />}
       {!signBar && !loginBar && <button onClick={() => setSignBar(true)}>Sign</button>}
-      {signBar && <Sign />}
+      {signBar && <Sign setSignBar={setSignBar} />}
     </div>
   );
 }
