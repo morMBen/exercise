@@ -59,9 +59,13 @@ userSchema.statics.findByCredentials = async (email, password) => {
     if (!user) {
         throw new Error('Unable to login')
     }
+    const test = await bcrypt.hash(password, 8)
+    const isMatchTest = await bcrypt.compare(password, test)
+    console.log(isMatchTest)
     const isMatch = await bcrypt.compare(password, user.password)
+    // console.log(isMatch)
     if (!isMatch) {
-        throw new Error('Unable to login')
+        throw new Error('Unable to login2')
     }
     return user
 }
@@ -69,7 +73,6 @@ userSchema.statics.findByCredentials = async (email, password) => {
 userSchema.methods.generateToken = async function () {
     const user = this;
     const token = jwt.sign({ _id: user._id.toString() }, 'thisismylogin')
-
     user.tokens = user.tokens.concat({ token })
     await user.save()
 
@@ -79,8 +82,9 @@ userSchema.methods.generateToken = async function () {
 // hash the text password befor saving
 userSchema.pre('save', async function (next) {
     const user = this
+    // console.log(this)
+    // console.log(this)
     user.password = await bcrypt.hash(user.password, 8)
-    console.log('befor saving')
     next()
 })
 

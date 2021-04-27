@@ -12,11 +12,11 @@ const getUsers = async (req, res) => {
 }
 
 const addUser = async (req, res) => {
-    let result;
+    let user = new User(req.body)
     try {
-        result = await new User(req.body).save()
-        const token = await result.generateToken()
-        return { result, token }
+        await user.save();
+        const token = await user.generateToken()
+        return { user, token }
     } catch (e) {
         throw new Error(e)
     }
@@ -50,7 +50,7 @@ const userLogin = async (req, res) => {
         const token = await user.generateToken()
         return { user, token }
     } catch (e) {
-        res.status(400).send(e)
+        throw new Error(e)
     }
 }
 module.exports = {

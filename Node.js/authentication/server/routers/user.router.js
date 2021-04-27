@@ -35,7 +35,7 @@ router
         //create user
         try {
             const addUser = await userController.addUser(req, res);
-            res.send(addUser)
+            res.status(201).send(addUser)
         } catch (e) {
             res.status(400).send(e.message)
         }
@@ -47,6 +47,20 @@ router
             res.send(user)
         } catch (e) {
             res.status(400).send(e.message)
+        }
+    })
+    .post('/logout', auth, async (req, res) => {
+        //user logout
+        try {
+            req.user.tokens = req.user.tokens.filter(token => {
+                return token.token !== req.token
+            })
+            console.log(req.user)
+            await req.user.save();
+
+            res.send()
+        } catch (e) {
+            res.status(500).send(e.message)
         }
     })
     .patch('/:id', async (req, res) => {
