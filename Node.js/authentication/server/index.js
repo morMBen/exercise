@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express();
+const cors = require('cors');
 // const path = require('path');
 require('./db/mongoose');
 const route = require('./routers/index.router');
@@ -20,6 +21,7 @@ const route = require('./routers/index.router');
 // })
 
 app.use(express.json())
+app.use(cors())
 app.use('/api/', route);
 
 //
